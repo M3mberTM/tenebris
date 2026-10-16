@@ -1,0 +1,9 @@
+{
+	"manifest_version": 3,
+	"name": "Tenebris",
+	"version": "1.0.0",
+	"description": "Simple extension that changes the browser theme and simplifies new page",
+    "chrome_url_overrides": {
+        "newtab": "newtab.html"
+    }
+}
