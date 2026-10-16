@@ -13,16 +13,6 @@ const manifest = {
 	theme: {
 		images: {
 
-            // tabs
-			// theme_frame: config.image,
-			// theme_frame_inactive: config.image,
-			// theme_frame_incognito: config.image,
-			// theme_frame_incognito_inactive: config.image,
-            // toolbar
-			// theme_toolbar: config.image,
-            // theme_tab_background: config.image, // inactive tabs and just them
-            // theme_ntp_background: testImage
-
             // need to all be pngs
             theme_frame: config.image, // upper tabs background. also overwrites the theme_frame_inactive if not set
             theme_frame_inactive: config.image, // upper tabs background, inactive
@@ -54,7 +44,7 @@ const manifest = {
 
             // button_background: config.colors.main,         // minimize, maximize and close buttons
 
-            bookmark_text: config.colors.text,             // text color on bookmark bar
+            bookmark_text: config.colors.secondaryText,             // text color on bookmark bar
             ntp_background: config.colors.main,             // new tab page background
             omnibox_background: config.colors.main,         // search bar background, when active
             // omnibox_text: [0,0,255],               // search bar text, when active, otherwise only some words. also changes some icons in the search bar
