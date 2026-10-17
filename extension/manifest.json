@@ -3,7 +3,21 @@
 	"name": "Tenebris",
 	"version": "1.0.0",
 	"description": "Simple extension that changes the browser theme and simplifies new page",
-    "chrome_url_overrides": {
-        "newtab": "newtab.html"
-    }
+	"chrome_url_overrides": {
+		"newtab": "newtab.html"
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://www.google.com/search*" ],
+            "js": ["dist/loader.js"],
+			"css": ["search.css"],
+            "run_at": "document_start"
+		}
+	],
+	"web_accessible_resources": [
+		{
+			"resources": ["images/texture.png"],
+			"matches": ["https://www.google.com/*"]
+		}
+	]
 }

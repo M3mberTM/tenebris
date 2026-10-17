@@ -5,8 +5,8 @@ const watch = process.argv.includes('--watch');
 /** @type {import('esbuild').BuildOptions} */
 const options = {
   entryPoints: {
-    'dist/popup': 'src/popup.ts',
-    'dist/newtab': 'src/newtab.ts',
+    'dist/loader': 'src/loader.ts',
+    'dist/index': 'src/index.ts',
   },
   bundle: true,
   format: 'iife',
