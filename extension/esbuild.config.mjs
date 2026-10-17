@@ -6,7 +6,6 @@ const watch = process.argv.includes('--watch');
 const options = {
   entryPoints: {
     'dist/loader': 'src/loader.ts',
-    'dist/index': 'src/index.ts',
   },
   bundle: true,
   format: 'iife',

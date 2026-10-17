@@ -35,9 +35,12 @@ a:visited {
 }
 
 .RDmXvc {
-    background-image: linear-gradient(transparent 0px, #22242ae6 52px, var(--xhUGwc) 80px); /* Figure out a way to make this gradient use my image from background */
+    background-image: none !important;
 }
 
 [selected] .R1QWuf, [selected] .M5dSnd {
     border-bottom-color: var(--accent) !important;
+}
+.IQTBxd {
+    --xhUGwc: var(--main) !important;
 }
