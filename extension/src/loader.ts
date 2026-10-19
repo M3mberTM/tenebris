@@ -1,6 +1,4 @@
-import config from "./theme.config.js";
-
-const textureUrl = chrome.runtime.getURL(config.image);
+const textureUrl = chrome.runtime.getURL("images/texture.png");
 
 function applyBackground() {
 	document.body.style.setProperty("background-image", `url("${textureUrl}")`, "important");

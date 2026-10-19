@@ -34,7 +34,7 @@ const manifest = {
             // background_tab: [180, 0, 255],                 // background for the specific tab, defaults to frame
             // background_tab_inactive: [255, 140, 0], // background for the specific tab, inactive, defaults to frame_inactive
 
-            tab_text: config.colors.text,                    // text of the currently selected tab
+            tab_text: config.colors.activeText,                    // text of the currently selected tab
             tab_background_text: config.colors.secondaryText,       // text of the inactive tabs
             // tab_background_text_inactive: config.colors.text, // text of the inactive tabs when window is inactive
 
@@ -59,8 +59,8 @@ const manifest = {
             ntp_section_text: [75, 0, 130],           // Indigo
             ntp_section_link: [127, 255, 0],          // Chartreuse
             ntp_section_link_underline: [0, 128, 128], // Teal
-            control_background: [255, 160, 200]       // Pastel Pink
             */
+            // control_background: config.colors.accent       // Pastel Pink
 		},
 		tints: {
 			// frame: [0.5, 0.5, 0.5], // changes the tint of the upper tabs

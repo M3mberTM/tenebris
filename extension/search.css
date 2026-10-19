@@ -44,3 +44,21 @@ a:visited {
 .IQTBxd {
     --xhUGwc: var(--main) !important;
 }
+
+.FkX2oe {
+    --bbQxAb: #ebc2c2 !important;
+}
+
+.RNNXgb, .aajZCb, .pD4qTd .yMAEcf {
+    border: 1px solid var(--accent) !important;
+}
+.pD4qTd .yMAEcf {
+    background: var(--main) !important;
+}
+
+.f6F9Be {
+    background-image: url("chrome-extension://cbafidbiomeflaioapjcengdfmjkomkg/images/texture.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
