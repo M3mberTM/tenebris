@@ -5,7 +5,7 @@ const watch = process.argv.includes('--watch');
 /** @type {import('esbuild').BuildOptions} */
 const options = {
   entryPoints: {
-    'dist/loader': 'src/loader.ts',
+    'dist/index': 'src/index.ts',
   },
   bundle: true,
   format: 'iife',
@@ -18,8 +18,8 @@ const options = {
 if (watch) {
   const ctx = await esbuild.context(options);
   await ctx.watch();
-  console.log('[RecentTabSwitch] esbuild watching for changes…');
+  console.log('[Tenebris] esbuild watching for changes…');
 } else {
   await esbuild.build(options);
-  console.log('[RecentTabSwitch] build complete');
+  console.log('[Tenebris] build complete');
 }
