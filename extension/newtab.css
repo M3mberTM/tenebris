@@ -129,6 +129,10 @@ body {
     text-decoration: none;
 }
 
+.bookmarkTitle:hover {
+    color: var(--activeText);
+}
+
 .bookmarkFolder {
     display: flex;
     flex-direction: column;
