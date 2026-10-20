@@ -118,3 +118,5 @@ function loadAndApplyBookmarks() {
 }
 
 document.addEventListener("DOMContentLoaded", loadAndApplyBookmarks);
+
+// TODO add listener to update bookmarks when they get changed, deleted, updated, added
