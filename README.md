@@ -28,24 +28,22 @@ and an extension that replaces the new tab and also the search results page.
 
 ## Preview
 
-<table>
-  <tr>
-    <td align="center" width="50%">
+<div style="display: flex; gap: 10px;">
+    <div align="center" width="50%">
       <h3>New Tab</h3>
       <img src="./images/previews/newTab.png" width="100%" alt="New Tab">
-    </td>
-    <td align="center" width="50%">
+    </div>
+    <div align="center" width="50%">
       <h3>Bookmarks</h3>
-      <img src="./images/previews/newTabBookmarks.png" width="100%" alt="Search Results">
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center">
+      <img src="./images/previews/newTabBookmarks.png" width="100%" alt="New Tab">
+    </div>
+</div>
+<div style="display: flex; gap: 10px; width: 50%; justify-self: center;">
+    <div align="center" width="50%">
       <h3>Search results</h3>
-      <img src="./images/previews/searchTab.png" width="50%" alt="Final Feature">
-    </td>
-  </tr>
-</table>
+      <img src="./images/previews/searchTab.png" width="100%" alt="New Tab">
+    </div>
+</div>
 
 ## Design Philosophy
 
