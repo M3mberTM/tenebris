@@ -8,19 +8,13 @@
     --IXoxUe: #ff0000 !important; /*more button next to website and under the website extra info*/
     --XKMDxc:#0c0c0c !important; /*bottom page "people also search for */
     --ZEpPmd: #ff0000 !important;/*show more in ai overview border */
-    --jwFC2e: #821919 !important;/*ai overview selected color
+    --jwFC2e: #821919 !important;/*ai overview selected color*/
     /* --jINu6c: #ff0000 !important; selected text normal */
     --bbQxAb: #ff0000 !important;/* read more */
     --YLNNHc: #f5f0f0 !important; /*search bar text, title text, ai overview title text, selected tab, top search specification tabs */
     --xhUGwc: #0c0c0c !important;
 }
 
-body {
-    background-image: url("chrome-extension://cbafidbiomeflaioapjcengdfmjkomkg/images/texture.png");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
 
 a:visited {
     color: var(--accent) !important;
@@ -54,11 +48,4 @@ a:visited {
 }
 .pD4qTd .yMAEcf {
     background: var(--main) !important;
-}
-
-.f6F9Be {
-    background-image: url("chrome-extension://cbafidbiomeflaioapjcengdfmjkomkg/images/texture.png");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
 }
