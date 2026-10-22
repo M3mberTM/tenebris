@@ -4,7 +4,6 @@ import { assert } from "./assert";
 function renderBookmarks(nodes: chrome.bookmarks.BookmarkTreeNode[], container: HTMLElement) {
 	log("Nodes ", nodes);
 	for (const node of nodes) {
-		// Folder: show its name and its children
         renderNodeAsBookmark(node, container);
 	}
 }
@@ -105,15 +104,18 @@ function getBookmarkBarMarks(tree: chrome.bookmarks.BookmarkTreeNode[]) {
 }
 
 function loadAndApplyBookmarks() {
-	const bookmarkList = document.getElementById("bookmarksList");
-	if (!bookmarkList) {
-		throw new Error("bookmarkList not found");
+	const leftBookmarksList = document.getElementById("leftBookmarksList");
+	const rightBookmarksList = document.getElementById("rightBookmarksList");
+	if (!leftBookmarksList || !rightBookmarksList) {
+		throw new Error("Left or right bookmarkList not found");
 	}
 	chrome.bookmarks.getTree((tree) => {
 		log("Tree ", tree);
-		bookmarkList.replaceChildren();
-		const bookmarks = getBookmarkBarMarks(tree);
-		renderBookmarks(bookmarks, bookmarkList);
+		leftBookmarksList.replaceChildren();
+		const bookmarksFromBar = getBookmarkBarMarks(tree);
+		renderBookmarks(bookmarksFromBar, leftBookmarksList);
+        console.log("All bookmarks");
+		renderBookmarks(tree[0].children || [], rightBookmarksList);
 	});
 }
 

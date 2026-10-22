@@ -12,15 +12,25 @@
 <body>
     <img id="wallpaper" alt="" class="wallpaper" src="images/background.png">
     <div class="bookmarksHoverable">
-        <div class="bookmarksToggle" id="bookmarksToggle"></div>
-        <div class="bookmarksSidebar" id="bookmarksSidebar">
+        <div class="bookmarksToggle"></div>
+        <div class="bookmarksSidebar" id="leftBookmarksSidebar">
             <div class="bookmarksHeader">
-                <h2 id="bookmarksTitle">BOOKMARKS</h3>
+                <h2 class="bookmarksTitle">BOOKMARKS</h3>
             </div>
-            <div id="bookmarksList">
-            </div>
+            <div id="leftBookmarksList" class="bookmarksList"> </div>
         </div>
     </div>
+
+    <div class="bookmarksHoverable right">
+        <div class="bookmarksToggle"></div>
+        <div class="bookmarksSidebar" id="rightBookmarksSidebar">
+            <div class="bookmarksHeader">
+                <h2 class="bookmarksTitle">ALL BOOKMARKS</h3>
+            </div>
+            <div id="rightBookmarksList" class="bookmarksList"> </div>
+        </div>
+    </div>
+
     <script type="module" src="dist/index.js"></script>
 </body>
 
