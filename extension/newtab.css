@@ -78,7 +78,10 @@ body {
     transform: translateX(-100%);
 }
 
-/* Right sidebar opens right-to-left */
+.bookmarksSidebar.open {
+    transform: translateX(0);
+}
+
 .right .bookmarksSidebar {
     width: 350px;
     left: auto;
@@ -87,7 +90,6 @@ body {
     border-left: 2px solid var(--accent);
     transform: translateX(100%);
 }
-
 
 .bookmarksHoverable:hover .bookmarksSidebar,
 .bookmarksHoverable:focus-within .bookmarksSidebar {
@@ -100,7 +102,6 @@ body {
     transform: translateX(0);
     transition: transform 1000ms cubic-bezier(0.22, 1, 0.36, 1);
 }
-
 
 .right:hover .bookmarksSidebar,
 .right:focus-within .bookmarksSidebar {
@@ -147,7 +148,6 @@ body {
     display: flex;
     flex-direction: column;
 
-    /* Hide scrollbar in Firefox and legacy Edge */
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -190,7 +190,7 @@ body {
     text-decoration: none;
 }
 
-/* Allow titles to wrap instead of overflowing */
+/* right sidebar titles were overflowing unlike left sidebar so this is a fix */
 .right .bookmarkTitle {
     flex: 1 1 0;
     min-width: 0;
@@ -254,14 +254,12 @@ body {
     width: calc(100% + 80px);
 }
 
-/* Extend the underline to the left */
 .right .folderTitle:hover::after,
 .right .bookmarkFolder:hover > .folderTitle::after,
 .right .bookmarkFolder:focus-within > .folderTitle::after {
     width: calc(100% + 80px);
 }
 
-/* Folder contents are hidden initially */
 .bookmarkFolder > .folderBookmarks {
     display: flex;
     flex-direction: column;
@@ -317,7 +315,6 @@ body {
     }
 }
 
-/* Keep right-side content within the sidebar */
 .right .bookmarksList,
 .right .folderBookmarks {
     width: 100%;
@@ -326,3 +323,44 @@ body {
 }
 
 
+
+/* Context menu */
+.contextMenu {
+    position: fixed;
+    z-index: 10000;
+    min-width: 150px;
+    padding: 5px;
+    background: var(--main);
+    border: 1px solid var(--accent);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.contextMenu[hidden] {
+    display: none;
+}
+
+.contextMenu button {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    border: none;
+    background: transparent;
+    color: var(--activeText);
+    text-align: left;
+    font: inherit;
+    cursor: pointer;
+}
+
+.contextMenu button:hover,
+.contextMenu button:focus-visible {
+    background: #292020;
+    outline: none;
+}
+
+.contextMenu .removeAction {
+    color: var(--accent);
+}
+
+.contextMenu .removeAction:hover {
+    background: #350b0b;
+}
