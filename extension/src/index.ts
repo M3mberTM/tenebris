@@ -160,10 +160,9 @@ let activeSidebar: HTMLElement | null = null;
 
 function closeContextMenu() {
     contextMenu.hidden = true;
-    activeSidebar?.classList.remove("open");
-    activeSidebar = null;
     selectedBookmark = null;
 }
+
 
 // Open the custom menu on right-click.
 document.addEventListener("contextmenu", (event: MouseEvent) => {
@@ -185,6 +184,12 @@ document.addEventListener("contextmenu", (event: MouseEvent) => {
     }
 
     activeSidebar = sidebar;
+    // TODO figure out a better way of doing this. also doesn't trigger if the user goes away and presses escape as the mouse technically didn't trigger mouseleave
+    activeSidebar.addEventListener("mouseleave", () => {
+        if (!contextMenu.hidden) return;
+        activeSidebar?.classList.remove("open");
+        activeSidebar = null;
+    })
     event.preventDefault();
 
     sidebar?.classList.add("open");
