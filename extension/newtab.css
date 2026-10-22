@@ -80,7 +80,7 @@ body {
 
 /* Right sidebar opens right-to-left */
 .right .bookmarksSidebar {
-    width: 400px;
+    width: 350px;
     left: auto;
     right: 0;
     border-right: none;
@@ -273,10 +273,15 @@ body {
 
     max-height: 0;
     overflow: hidden;
+    visibility: hidden;
+    pointer-events: none;
     opacity: 0;
+
+    transform: translateY(-8px);
     transition:
         max-height 350ms ease,
         opacity 250ms ease,
+        visibility 0s linear 400ms,
         transform 350ms ease;
 }
 
@@ -290,11 +295,26 @@ body {
     border-right: 1px solid var(--accent);
 }
 
-.bookmarkFolder:hover > .folderBookmarks,
-.bookmarkFolder:focus-within > .folderBookmarks {
+.bookmarkFolder.open > .folderBookmarks {
     max-height: 10000px;
+    overflow: visible;
     opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
     transform: translateY(0);
+
+    transition:
+        max-height 500ms ease,
+        opacity 250ms ease,
+        transform 350ms ease,
+        visibility 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bookmarkFolder > .folderBookmarks {
+        transition: none;
+        transform: none;
+    }
 }
 
 /* Keep right-side content within the sidebar */

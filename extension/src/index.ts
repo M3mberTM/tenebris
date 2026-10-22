@@ -121,4 +121,23 @@ function loadAndApplyBookmarks() {
 
 document.addEventListener("DOMContentLoaded", loadAndApplyBookmarks);
 
-// TODO add listener to update bookmarks when they get changed, deleted, updated, added
+// update listeneners
+chrome.bookmarks.onChanged.addListener(loadAndApplyBookmarks);
+chrome.bookmarks.onCreated.addListener(loadAndApplyBookmarks);
+chrome.bookmarks.onMoved.addListener(loadAndApplyBookmarks);
+chrome.bookmarks.onRemoved.addListener(loadAndApplyBookmarks);
+
+// expanding folders with a click instead of hover
+document.addEventListener("click", (event) => {
+    const target = event.target;
+
+    if (!(target instanceof Element)) return;
+
+    const title = target.closest(".folderTitle");
+    if (!title) return;
+
+    const folder = title.closest(".bookmarkFolder");
+    if (!folder) return;
+
+    folder.classList.toggle("open");
+});
