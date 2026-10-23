@@ -3,7 +3,7 @@
 	"name": "Tenebris",
 	"version": "1.0.0",
 	"description": "Simple extension that changes the browser theme and simplifies new page",
-	"permissions": ["bookmarks", "favicon"],
+	"permissions": ["bookmarks", "favicon", "tabs"],
 	"chrome_url_overrides": {
 		"newtab": "newtab.html"
 	},

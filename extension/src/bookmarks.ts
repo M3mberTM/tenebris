@@ -55,6 +55,7 @@ function getFaviconElement(node: chrome.bookmarks.BookmarkTreeNode): HTMLImageEl
 function createBookmark(node: chrome.bookmarks.BookmarkTreeNode, container: HTMLElement) {
     assert(node.url, "Node has to have a url to build a bookmark");
 
+    const url = node.url;
     const bookmark = document.createElement("div");
     bookmark.className = "bookmark";
     bookmark.dataset.bookmarkType = "bookmark";
@@ -62,8 +63,14 @@ function createBookmark(node: chrome.bookmarks.BookmarkTreeNode, container: HTML
     const bookmarkIcon = getFaviconElement(node);
     const mainLink = document.createElement("a");
     mainLink.className = "bookmarkTitle";
-    mainLink.href = node.url;
+    mainLink.href = url;
     mainLink.textContent = node.title;
+    if (url.startsWith("file:///")) {
+        mainLink.addEventListener("click", (event) => {
+            event.preventDefault();
+            chrome.tabs.update({ url });
+        });
+    }
     bookmark.append(bookmarkIcon, mainLink);
     container.appendChild(bookmark);
 }
