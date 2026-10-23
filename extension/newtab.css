@@ -364,3 +364,42 @@ body {
 .contextMenu .removeAction:hover {
     background: #350b0b;
 }
+
+.renameModal {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#renameForm {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#renameInput {
+    width: 50%;
+    box-sizing: border-box;
+    background: var(--main);
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    color: var(--activeText);
+    font-size: large;
+    padding: 15px 20px;
+}
+
+#renameInput:focus-visible {
+    border: 1px solid var(--accent);
+    outline: none;
+}
+
+.renameModal[hidden] {
+    display: none;
+}
