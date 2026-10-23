@@ -1,82 +1,39 @@
 {
-  "manifest_version": 3,
-  "name": "Tenebris Theme",
-  "version": "1.0.0",
-  "theme": {
-    "images": {
-      "theme_frame": "images/texture.png",
-      "theme_frame_inactive": "images/texture.png",
-      "theme_toolbar": "images/texture.png",
-      "theme_tab_background": "images/texture.png",
-      "theme_tab_background_inactive": "images/texture.png",
-      "theme_ntp_background": "images/texture.png",
-      "theme_frame_overlay": "images/texture.png",
-      "theme_frame_overlay_inactive": "images/texture.png",
-      "theme_button_background": "images/texture.png"
-    },
-    "colors": {
-      "frame": [
-        12,
-        12,
-        12
-      ],
-      "frame_inactive": [
-        12,
-        12,
-        12
-      ],
-      "tab_text": [
-        245,
-        240,
-        240
-      ],
-      "tab_background_text": [
-        127,
-        99,
-        99
-      ],
-      "toolbar": [
-        12,
-        12,
-        12
-      ],
-      "toolbar_button_icon": [
-        255,
-        0,
-        0
-      ],
-      "toolbar_text": [
-        255,
-        0,
-        0
-      ],
-      "bookmark_text": [
-        127,
-        99,
-        99
-      ],
-      "ntp_background": [
-        12,
-        12,
-        12
-      ],
-      "omnibox_background": [
-        12,
-        12,
-        12
-      ]
-    },
-    "tints": {
-      "frame_inactive": [
-        -1,
-        -1,
-        -1
-      ],
-      "background_tab": [
-        -1,
-        0.5,
-        0
-      ]
-    }
-  }
+	"manifest_version": 3,
+	"name": "Tenebris Theme",
+	"version": "1.0.0",
+	"icons": {
+		"16": "icons/icon16.png",
+		"48": "icons/icon48.png",
+		"128": "icons/icon128.png"
+	},
+	"theme": {
+		"images": {
+			"theme_frame": "images/texture.png",
+			"theme_frame_inactive": "images/texture.png",
+			"theme_toolbar": "images/texture.png",
+			"theme_tab_background": "images/texture.png",
+			"theme_tab_background_inactive": "images/texture.png",
+			"theme_ntp_background": "images/texture.png",
+			"theme_frame_overlay": "images/texture.png",
+			"theme_frame_overlay_inactive": "images/texture.png",
+			"theme_button_background": "images/texture.png"
+		},
+		"colors": {
+			"frame": [12, 12, 12],
+			"frame_inactive": [12, 12, 12],
+			"tab_text": [245, 240, 240],
+			"tab_background_text": [127, 99, 99],
+			"toolbar": [12, 12, 12],
+			"toolbar_button_icon": [255, 0, 0],
+			"toolbar_text": [255, 0, 0],
+			"bookmark_text": [127, 99, 99],
+			"ntp_background": [12, 12, 12],
+			"omnibox_background": [12, 12, 12]
+		},
+		"tints": {
+			"frame_inactive": [-1, -1, -1],
+			"background_tab": [-1, 0.5, 0]
+		}
+	}
 }

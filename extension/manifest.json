@@ -4,6 +4,11 @@
 	"version": "1.0.0",
 	"description": "Simple extension that changes the browser theme and simplifies new page",
 	"permissions": ["bookmarks", "favicon", "tabs"],
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
 	"chrome_url_overrides": {
 		"newtab": "newtab.html"
 	},
