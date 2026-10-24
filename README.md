@@ -23,7 +23,7 @@
 TENEBRIS is a collection of 2 extensions. A theme that overrides the default colors in the browser
 and an extension that replaces the new tab and also the search results page.
 
-- **New Tab** — A minimal, distraction-free starting point for your browser. Move left to show bookmarks.
+- **New Tab** — A minimal, distraction-free starting point for your browser. Provides custom bookmarks to the left and right of the screen
 - **Search** — A redesigned search results page that brings the same visual language to your searches.
 
 ## Preview
